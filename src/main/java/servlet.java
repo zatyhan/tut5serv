@@ -34,7 +34,7 @@ public class servlet extends HttpServlet{
         Gson gson= new Gson();
         Patient p= gson.fromJson(reqBody,Patient.class);
         resp.setContentType("application/json");
-        resp.getWriter().write("Thank you client! "+ p);
+        resp.getWriter().write("Thank you client! "+ reqBody);
 
     }
 }
