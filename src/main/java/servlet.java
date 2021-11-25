@@ -22,7 +22,7 @@ public class servlet extends HttpServlet{
                 "</head>\n" +
                 "<body>\n" +
                 "<h1> Nur Eizzaty Hamzaid </h1>\n" +
-                "<p> :) </p>\n" +
+                "<p> i don't know what the hell im doing </p>\n" +
                 "</body>\n" +
                 "</html>");
         resp.getWriter().write(req.getServletPath());
