@@ -33,8 +33,7 @@ public class servlet extends HttpServlet{
         String reqBody = req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
         Gson gson= new Gson();
         Patient p= gson.fromJson(reqBody,Patient.class);
-        System.out.println(p);
-        resp.setContentType("application/json");
+        resp.setContentType("text/html");
         resp.getWriter().write("Thank you client! "+ p);
 
     }
