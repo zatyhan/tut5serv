@@ -30,10 +30,11 @@ public class servlet extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Gson gson= new Gson();
         String reqBody = req.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+        Gson gson= new Gson();
         Patient p= gson.fromJson(reqBody,Patient.class);
         resp.setContentType("application/json");
         resp.getWriter().write("Thank you client! "+ p);
+
     }
 }
